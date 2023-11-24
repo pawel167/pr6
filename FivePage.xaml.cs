@@ -24,5 +24,22 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            answer.Clear();
+            if (!int.TryParse(textbox1.Text, out int x))
+            {
+                MessageBox.Show("Поле А только число!");
+            }
+            int k = 1, d = 10, s = 10;
+            while (s <= 200)
+            {
+                ++k;
+                d += d * x / 100;
+                s += d;
+            }
+            answer.Text += $"суммарный пробег лыжника за все дни превысит 200 км в {d} день \n суммарный пробег = {s}";
+        }
     }
 }

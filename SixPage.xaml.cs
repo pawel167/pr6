@@ -24,5 +24,28 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            answer.Clear();
+            if (!int.TryParse(textbox1.Text, out int x))
+            {
+                MessageBox.Show("Поле А только число!");
+            }
+            bool d = false;
+            while (d)
+            {
+                if (x % 10 == 2)
+                {
+                    d = true;
+                }
+                x /= 10;
+            }
+            if (d )
+            { answer.Text += true; }
+            else
+            { answer.Text += false; }
+            
+        }
     }
 }

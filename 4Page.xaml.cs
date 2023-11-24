@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp1
@@ -18,7 +17,7 @@ namespace WpfApp1
     /// <summary>
     /// Логика взаимодействия для FourPage.xaml
     /// </summary>
-    public partial class FourPage : Page
+    public partial class FourPage : Window
     {
         public FourPage()
         {
@@ -33,11 +32,7 @@ namespace WpfApp1
                 MessageBox.Show("Поле А только число!");
             }
             bool flag = false;
-            while (x >= 3)
-            {
-                x /= 3;
-            }
-            if (x == 1)
+            if (Math.Log(x) % Math.Log(x) == 0)
                 flag = true;
             else
                 flag = false;
