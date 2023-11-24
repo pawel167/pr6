@@ -59,7 +59,7 @@ namespace WpfApp1
                     c = 2 * h;
                     a = c / Sqrt(2);
                     s = c * h / 2;
-                    answer.Text += $"катет ={a}\n гипотенуза ={c}\n высота ={h}\n площадь ={s}";
+                    answer.Text += $"катет = {a}\n гипотенуза = {c}\n высота = {h}\n площадь = {s}";
                     break;
                 case 4:
                     s = y;
