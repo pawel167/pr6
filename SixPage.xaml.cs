@@ -31,21 +31,16 @@ namespace WpfApp1
             if (!int.TryParse(textbox1.Text, out int x))
             {
                 MessageBox.Show("Поле А только число!");
-            }
-            bool d = false;
-            while (d)
-            {
-                if (x % 10 == 2)
-                {
-                    d = true;
-                }
+            }           
+            while (x > 0 && x % 10 != 2)
+            {               
                 x /= 10;
             }
-            if (d )
-            { answer.Text += true; }
+            if (x > 0 && x % 10 == 2)
+            { answer.Text += "true" + "\n"; }
             else
-            { answer.Text += false; }
-            
+            { answer.Text += "false" + "\n"; }
+
         }
     }
 }
