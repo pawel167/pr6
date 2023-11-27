@@ -42,7 +42,7 @@ namespace WpfApp1
                     answer.Text += "в этом месяце 31 дней";
                     break;
                 case 2:
-                    answer.Text += "в этом месяце 30 дней";
+                    answer.Text += "в этом месяце 29 дней";
                     break;
                 case 3:
                     answer.Text += "в этом месяце 31 дней";
